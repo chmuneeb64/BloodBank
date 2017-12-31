@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rLayoutMain"
+    tools:context="com.example.muneeb.bloodbank.MainActivity">
+
+    <ImageView
+        android:id="@+id/frontImage"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/front_image"
+        app:srcCompat="@drawable/frontimg" />
+
+    <EditText
+        android:id="@+id/emailText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/frontImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext_bg"
+        android:drawableEnd="@drawable/ic_action_user"
+        android:ems="10"
+        android:hint="@string/email_address"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/passwordText_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailText"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/colorAccent">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/passwordText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/edittext_bg"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold|italic"
+        android:text="@string/remember_me"
+        android:layout_below="@+id/passwordText_layout"
+        android:layout_alignStart="@+id/frontImage"
+        android:layout_marginTop="5dp" />
+
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_colorchange"
+        android:padding="12dp"
+        android:text="@string/login"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:layout_below="@+id/checkBox"
+        android:layout_alignStart="@+id/checkBox" />
+
+    <Button
+        android:id="@+id/signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/login"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/login"
+        android:background="@drawable/button_colorchange"
+        android:padding="12dp"
+        android:text="@string/sign_up"
+        android:textColor="@android:color/white"
+        android:textSize="25sp" />
+
+</RelativeLayout>

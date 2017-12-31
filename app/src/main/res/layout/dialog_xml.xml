@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:id="@+id/phone_imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_action_phone"
+        android:contentDescription="@string/phone_number"
+        android:layout_below="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold|italic"
+        android:textColor="#000"
+        android:text="TextView"
+        android:layout_marginTop="7dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/bloodTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:typeface="serif"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="12sp"
+        android:text=""
+        android:layout_below="@+id/nameTextView"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_marginTop="18dp" />
+
+    <TextView
+        android:id="@+id/ageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:typeface="serif"
+        android:textSize="12sp"
+        android:text=""
+        android:layout_marginStart="25dp"
+        android:layout_alignBaseline="@+id/bloodTextView"
+        android:layout_alignBottom="@+id/bloodTextView"
+        android:layout_toEndOf="@+id/bloodTextView" />
+
+    <TextView
+        android:id="@+id/cityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:typeface="serif"
+        android:textSize="15sp"
+        android:text="textview"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/emailTextView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/phoneTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:layout_below="@+id/imageView"
+        android:layout_alignStart="@+id/bloodTextView"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold|italic"
+        android:textColor="#000"
+        android:text=""
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/phone_imageView"
+        android:layout_alignStart="@+id/phone_imageView" />
+
+    <Button
+        android:id="@+id/massageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_colorchange"
+        android:padding="12dp"
+        android:text="@string/massage_btn"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/closeButton"
+        android:layout_alignBottom="@+id/closeButton"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_colorchange"
+        android:padding="12dp"
+        android:text="@string/close_btn"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_below="@+id/cityTextView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,175 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.muneeb.bloodbank.UpdateFrag">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/keyUpdateView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            style="@style/Base.TextAppearance.AppCompat.Headline"
+            android:layout_centerHorizontal="true"
+            android:text="@string/key_id" />
+
+        <EditText
+            android:id="@+id/nameText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_bg"
+            android:textColor="@color/colorAccent"
+            android:ems="10"
+            android:inputType="textCapWords"
+            android:hint="@string/name"
+            android:textAlignment="center"
+            android:layout_below="@+id/keyUpdateView"
+            android:layout_marginTop="5dp"
+            android:layout_alignStart="@+id/emailText" />
+
+        <EditText
+            android:id="@+id/emailText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/edittext_bg"
+            android:textColor="@color/colorAccent"
+            android:layout_below="@+id/nameText"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/email_address"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"/>
+
+        <EditText
+            android:id="@+id/passwordText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@+id/emailText"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_bg"
+            android:textColor="@color/colorAccent"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"/>
+
+        <EditText
+            android:id="@+id/phoneText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/passwordText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_bg"
+            android:ems="10"
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent" />
+
+        <EditText
+            android:id="@+id/cityText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@+id/phoneText"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_bg"
+            android:textColor="@color/colorAccent"
+            android:hint="@string/city"
+            android:textAlignment="center"
+            android:ems="10"
+            android:inputType="textCapWords"
+            android:layout_centerHorizontal="true"/>
+
+        <EditText
+            android:id="@+id/ageText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@+id/cityText"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_bg"
+            android:textColor="@color/colorAccent"
+            android:hint="@string/age"
+            android:textAlignment="center"
+            android:ems="10"
+            android:inputType="number"
+            android:layout_centerHorizontal="true"/>
+
+        <EditText
+            android:id="@+id/bloodGroupText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@+id/ageText"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_bg"
+            android:textColor="@color/colorAccent"
+            android:hint="@string/blood_group"
+            android:textAlignment="center"
+            android:ems="10"
+            android:inputType="textCapWords"
+            android:layout_centerHorizontal="true"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bloodGroupText"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:checkedButton="@+id/radioMale"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gender"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/radioMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male" />
+
+            <RadioButton
+                android:id="@+id/femaleRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/female" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGroup"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_colorchange"
+            android:padding="12dp"
+            android:text="@string/update"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</ScrollView>
